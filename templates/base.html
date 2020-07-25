@@ -1,17 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engrisk2Voca</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/nolan/64/brick.png" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'js/main.js' %}">
 </head>
+
 <body>
     <h1 id="title">Cần gì hơn khi đã có em?</h1>
     <hr>
-    {% block main %}
-    {% endblock %}
+    <center>
+        {% block main %}
+        {% endblock %}
+    </center>
+    <div class="footer">
+        <span id="credit">Tính thiếu Nhi</span>
+    </div>
 </body>
+
+
 </html>

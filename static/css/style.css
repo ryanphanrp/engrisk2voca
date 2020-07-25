@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+
+body {
+    padding: 20px 300px;
+}
+
+#title {
+    font-family: 'Bungee', cursive;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.sentence {
+    display: flex;
+    justify-content: space-between;
+    margin: 7px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.word-sentence {
+    width: 20%;
+    background-color: #14b1ab;
+    padding: 5px 5px;
+    text-align: center;
+    color: white;
+}
+
+.definition-sentence {
+    padding: 5px 20px;
+    width: 100%;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}

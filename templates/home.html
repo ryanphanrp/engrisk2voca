@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<ul>
+    {% for vocabulary in vocabularys %}
+    <li class="sentence">
+        <div id='word-{{ vocabulary.word }}' class="word-sentence"><strong>-</strong></div>
+        <div class="definition-sentence"> {{ vocabulary.definition }} </div>
+        <div class="btn-sentence"><button id='showword-{{ vocabulary.word }}'>Show</button></div>
+        <script>
+            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("click", function () {
+                document.getElementById("word-{{ vocabulary.word }}").innerHTML = "<strong>{{ vocabulary.word }}</strong>";
+            });
+            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("dblclick", hiddenkey);
+
+            function hiddenkey() {
+                document.getElementById("word-{{ vocabulary.word }}").innerHTML = "<strong>-</strong>";
+            }
+        </script>
+
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

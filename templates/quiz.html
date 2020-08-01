@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<ul class='listanswer'>
+    {% for vocabulary in vocabularys %}
+    <li class="sentence">
+        <input type="text" placeholder="Type your answer here!" class='answer left' name='{{ vocabulary.word }}' value=""/>
+        <div class="definition-sentence right"> {{ vocabulary.definition }} </div>
+    </li>
+    {% endfor %}
+    <button onclick="myFunction()" id="submit">Submit</button>
+</ul>
+
+<script>
+    function myFunction() {
+        var lst = document.getElementsByClassName("answer");
+        for (var i = 0; i < 10; i++) {
+            var val = lst[i].getAttribute("name");
+            if (lst[i].value == val){
+                lst[i].style.backgroundColor = "#21bf73";
+            }
+            else {
+                lst[i].value = val;
+                lst[i].style.backgroundColor = '#d92027';
+            }
+        }
+        // lst.forEach(element => {
+        //     var val = element.getAttribute("name");
+        //     if (element.value == val){
+        //         element.style.backgroundColor = "#21bf73";
+        //     }
+        //     else {
+        //         element.value = val;
+        //         element.style.backgroundColor = '#d92027';
+        //     }
+        // });
+        document.getElementById('hahalolo').innerHTML = 'Quiz Again?';
+    }
+</script>
+
+{% endblock %}

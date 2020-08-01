@@ -12,7 +12,14 @@
 </head>
 
 <body>
-    <h1 id="title">Cần gì hơn khi đã có em?</h1>
+    
+    <a href="{% url 'vocabulary:home' %}">
+        <h1 id="title">Cần gì hơn khi đã có em?</h1>
+    </a>
+    <a href="{% url 'vocabulary:quiz' %}">
+        <h4 id="hahalolo">fromtinhtutewithlove</h4>
+    </a>
+    
     <hr>
     <center>
         {% block main %}

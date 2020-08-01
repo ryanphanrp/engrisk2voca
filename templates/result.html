@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<h1>Mark: {{ mark }}</h1>
+<a href="{% url 'vocabulary:quiz' %}">Back to quiz again?</a>
+{% endblock %}

@@ -2,12 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 
-body {
-    margin: 0 0;
-    padding: 0 0;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
+
+a {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
 #title {
+    font-family: 'Bungee', cursive;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#hahalolo {
     font-family: 'Bungee', cursive;
     background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 	-webkit-background-clip: text;
@@ -38,6 +58,10 @@ ul {
     color: white;
 }
 
+.left {
+    width: 30%;
+}
+
 .definition-sentence {
     padding: 5px 20px;
     width: 100%;
@@ -47,13 +71,18 @@ ul {
 button {
     height: 100%;
     width: 100%;
-    font-weight: bold;
-    cursor: pointer;
+    font-weight: 600;
+}
+
+#submit {
+    border-radius: 30px;
+    padding: 10px 20px;
 }
 
 .footer {
-    position: relative;
+    position: fixed;
     left: 0;
+    right: 0;
     bottom: 0;
     margin: 0 0;
     padding: 5px 0px;
@@ -67,3 +96,17 @@ button {
     font-family: 'VT323', monospace;
     text-align: center;
 }
+
+.answer {
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 0px;
+    background-color: #14b1ab;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 100;
+    opacity: 1; /* Firefox */
+  }

@@ -9,17 +9,19 @@
         <div class="definition-sentence"> {{ vocabulary.definition }} </div>
         <div class="btn-sentence"><button id='showword-{{ vocabulary.word }}'>Show</button></div>
         <script>
-            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("click", function () {
+            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("click", function (id) {
                 document.getElementById("word-{{ vocabulary.word }}").innerHTML = "<strong>{{ vocabulary.word }}</strong>";
             });
-            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("dblclick", hiddenkey);
-
-            function hiddenkey() {
-                document.getElementById("word-{{ vocabulary.word }}").innerHTML = "<strong>-</strong>";
-            }
+            document.getElementById("showword-{{ vocabulary.word }}").addEventListener("dblclick", (id) => {
+                window.getSelection().selectAllChildren(document.getElementById("word-{{ vocabulary.word }}"));
+                document.execCommand("copy");
+            });
         </script>
 
     </li>
     {% endfor %}
 </ul>
+<script type="text/javascript">
+    
+</script>
 {% endblock %}
